@@ -7,54 +7,115 @@
     <title>Global Auto-Center</title>
     <style>
           body {
-              background-color: darkblue;
+              background-color: dodgerblue;
               color: white;
+              font-family: Verdana, Geneva, Tahoma, sans-serif;
           }
-          img {
-              width: 250px;
+          .container {
+            padding-top: 20px;
+          }
+          .col {
+            margin-bottom: 20px;
+          }
+          .logo {
+            width: 85%;
+            margin-left: 7.5%;
+            border-radius: 20px;
+          }
+          .card {
+            background-color: lightseagreen;
+          }
+          .footer {
+            padding: 10px;
+            background-color: royalblue;
+          }
+          .lg {
+            background-color: rgba(255, 255, 255, 0.5);
+            padding-bottom: 10px;
           }
     </style>
 </head>
 <body>
     <nav class="navbar navbar-light bg-light">
-        <span class="navbar-brand mb-0 h1">Global Auto-Center</span>
+        <span class=" text-center navbar-brand mb-0 h1" style="width: 100%;">Bem vindo a Global Auto-Center!</span>
     </nav>
+    <div class="lg">
+      <img class="logo" src="./Logo.png" alt="Logo">
+    </div>
     <div class="container">
 
-      <div class="card" style="width: 18rem;">
-          <img src="./Freios.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <button class="btn btn-primary">Clique aqui</button>
+      <div class="row">
+        <div class="col col-md-4 col-sm-12 col-xl-3">
+          <div class="card" style="width: 100%;">
+            <img src="./Freios.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <button onclick="message(0)" data-toggle="modal" data-target="#modal" style="width: 100%;" class="btn btn-primary">Saiba Mais</button>
+            </div>
           </div>
         </div>
-  
-        <div class="card" style="width: 18rem;">
-          <img src="./Injecao-Eletronica.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <button class="btn btn-primary">Clique aqui</button>
+        <div class="col col-md-4 col-sm-12 col-xl-3">
+          <div class="card" style="width: 100%;">
+            <img src="./Injecao-Eletronica.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <button onclick="message(1)" data-toggle="modal" data-target="#modal" style="width: 100%;" class="btn btn-primary">Saiba Mais</button>
+            </div>
           </div>
         </div>
-  
-        <div class="card" style="width: 18rem;">
-          <img src="./Motor-Cambio.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <button class="btn btn-primary">Clique aqui</button>
+        <div class="col col-md-4 col-sm-12 col-xl-3">
+          <div class="card" style="width: 100%;">
+            <img src="./Motor-Cambio.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <button onclick="message(2)" data-toggle="modal" data-target="#modal" style="width: 100%;" class="btn btn-primary">Saiba Mais</button>
+            </div>
           </div>
         </div>
-  
-        <div class="card" style="width: 18rem;">
-          <img src="./Suspencao.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <button class="btn btn-primary">Clique aqui</button>
+        <div class="col col-md-4 col-sm-12 col-xl-3">
+          <div class="card" style="width: 100%;">
+            <img src="./Suspencao.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <button onclick="message(3)" data-toggle="modal" data-target="#modal" style="width: 100%;" class="btn btn-primary">Saiba Mais</button>
+            </div>
           </div>
         </div>
-  
-        <div class="card" style="width: 18rem;">
-          <img src="./Troca-Oleo.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <button class="btn btn-primary">Clique aqui</button>
+        <div class="col col-md-4 col-sm-12 col-xl-3">
+          <div class="card" style="width: 100%;">
+            <img src="./Troca-Oleo.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <button onclick="message(4)" data-toggle="modal" data-target="#modal" style="width: 100%;" class="btn btn-primary">Saiba Mais</button>
+            </div>
           </div>
         </div>
+      </div>
     </div>
-</body>
-</html>/
+    <div class="footer navbar navbar-fixed-bottom">
+      <div class="container">
+        <p>
+          Endereço:
+          Rua 14 de Julho, n° 3164
+          Centro, Campo Grande-MS / 
+          CEP: 79002-332
+          <br>
+          <b>Próximo a Feira Central</b>
+        </p>
+      </div>
+    </div>
+    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="title" style="color: black; font-weight: bold;">AAA</h5>
+          </div>
+          <div class="modal-body">
+            <p id="desc" style="color: black;">AAA</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="./message.js"></script>
+  </body>
+</html>
