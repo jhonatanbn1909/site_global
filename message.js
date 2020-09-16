@@ -15,8 +15,8 @@ var descs = [
 ]
 
 function message(n){
-    document.getElementById("desc").innerText = descs[n];
-    document.getElementById("title").innerText = titles[n];
+    document.getElementById("desc").innerHTML = descs[n];
+    document.getElementById("title").innerHTML = titles[n];
 }
 
 function whats(){
